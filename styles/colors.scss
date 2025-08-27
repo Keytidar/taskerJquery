@@ -1,0 +1,15 @@
+$bg-color: rgb(8, 9, 12);
+$text-color: rgb(163, 172, 192);
+$text-color-secondary: rgb(115, 124, 144);
+$accent-color: rgb(107, 114, 140);
+$secondary-accent-color: rgb(122, 133, 156);
+
+$body-bg: $bg-color;
+$body-color: $text-color;
+$secondary-color: $text-color-secondary;
+$border-color: $accent-color;
+$primary: $secondary-accent-color;
+
+$input-bg: rgba($bg-color, 0.8);
+$input-color: $text-color;
+$input-border-color: $accent-color;
