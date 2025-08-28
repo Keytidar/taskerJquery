@@ -1,1 +1,96 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Nebula flow</title><link rel="icon" type="image/x-icon" href="./assets/images/galaxy.png"><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous"/><link rel="stylesheet" href="../styles/style.css"/><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"><script src="https://code.jquery.com/jquery-3.7.1.min.js"></script><script defer="defer" type="module" src="./bundle.js"></script><script defer="defer" src="bundle.js"></script></head><body class="bg"><div id="preloader"><div class="spinner-border no-border" role="status" style="min-width: 8rem; min-height: 8rem"><svg viewBox="0 0 48 48" data-name="Layer 1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" fill="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style>.cls-1,.cls-2{fill:none;stroke:#6B728C;stroke-linecap:round;stroke-linejoin:round;}.cls-1{stroke-width:1.89px;}.cls-2{stroke-width:2px;}</style></defs><title></title><path class="cls-1" d="M47,27V21H41.51a18.09,18.09,0,0,0-2.76-6.68l3.88-3.87L37.55,5.37,33.68,9.25A18.09,18.09,0,0,0,27,6.49V1H21V6.49a18.09,18.09,0,0,0-6.68,2.76L10.45,5.37,5.37,10.45l3.88,3.87A18.09,18.09,0,0,0,6.49,21H1v6H6.49a18.09,18.09,0,0,0,2.76,6.68L5.37,37.55l5.08,5.08,3.87-3.88A18.09,18.09,0,0,0,21,41.51V47h6V41.51a18.09,18.09,0,0,0,6.68-2.76l3.87,3.88,5.08-5.08-3.88-3.87A18.09,18.09,0,0,0,41.51,27Z"></path><circle class="cls-2" cx="24" cy="24" r="9"></circle></g></svg></div></div><div class="container-lg invisible-container d-flex flex-column gap-3" id="invisible-container"><div class="container-lg" id="tasks-display"><ul class="list-group list-unstyled" id="tasks-ul"></ul></div><div id="errors-container" class="d-flex justify-content-center"></div><form action="" class="d-flex flex-column gap-3 task-input" id="task-submit"><div class="container-lg d-flex justify-content-center gap-3" id="func-bar" style="min-height: 3rem;"><input type="color" name="" id="task-color" style="min-height: 3rem;" value="#000000"> <button type="button" class="btn btn-dark" disabled="disabled">Map</button></div><input class="form-control form-control-lg" placeholder="Task heading" data-orig-placeholder="Task heading" id="task-heading"/><div class="container-lg d-flex justify-content-center gap-3"><input type="date" name="" id="task-date-input" style="height: 3rem; width: 15rem;"> <input type="time" name="" id="task-time-input" style="height:3rem;"></div><textarea class="form-control" placeholder="Task info" data-orig-placeholder="Task info" id="task-info" style="height: 100px"></textarea> <button type="submit" class="btn btn-primary btn-lg default-color" id="submit-task-btn">Add task</button></form></div><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script><div class="modal" id="myModal" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="titleModal">Modal title</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><p id="textModal">Modal body text goes here.</p></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nebula flow</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/galaxy.png">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script defer type="module" src="index.mjs"></script>
+  <script defer src="index.mjs"></script></head>
+  <body class="bg">
+    <div id="preloader">
+      <div 
+        class="spinner-border no-border"
+        role="status"
+        style="min-width: 8rem; min-height: 8rem"
+      ><svg viewBox="0 0 48 48" data-name="Layer 1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" fill="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style>.cls-1,.cls-2{fill:none;stroke:#6B728C;stroke-linecap:round;stroke-linejoin:round;}.cls-1{stroke-width:1.89px;}.cls-2{stroke-width:2px;}</style></defs><title></title><path class="cls-1" d="M47,27V21H41.51a18.09,18.09,0,0,0-2.76-6.68l3.88-3.87L37.55,5.37,33.68,9.25A18.09,18.09,0,0,0,27,6.49V1H21V6.49a18.09,18.09,0,0,0-6.68,2.76L10.45,5.37,5.37,10.45l3.88,3.87A18.09,18.09,0,0,0,6.49,21H1v6H6.49a18.09,18.09,0,0,0,2.76,6.68L5.37,37.55l5.08,5.08,3.87-3.88A18.09,18.09,0,0,0,21,41.51V47h6V41.51a18.09,18.09,0,0,0,6.68-2.76l3.87,3.88,5.08-5.08-3.88-3.87A18.09,18.09,0,0,0,41.51,27Z"></path><circle class="cls-2" cx="24" cy="24" r="9"></circle></g></svg></div>
+    </div>
+
+    <div class="container-lg invisible-container d-flex flex-column gap-3" id="invisible-container">
+      <div class="container-lg" id="tasks-display">
+        <ul class="list-group list-unstyled" id="tasks-ul">
+        </ul>
+      </div>
+
+      <div id="errors-container" class="d-flex justify-content-center">
+      </div>
+
+      <form action="" class="d-flex flex-column gap-3 task-input" id="task-submit">
+        <div class="container-lg d-flex justify-content-center gap-3" id="func-bar" style="min-height: 3rem;">
+          <input type="color" name="" id="task-color" style='min-height: 3rem;' value="#000000">
+          <button type="button" class="btn btn-dark" disabled>Map</button>
+        </div>
+        <input
+          class="form-control form-control-lg"
+          type="text"
+          placeholder="Task heading"
+          data-orig-placeholder='Task heading'
+          id="task-heading"
+        />
+        <div class="container-lg d-flex justify-content-center gap-3">
+          <input type="date" name="" id="task-date-input" style="height: 3rem; width: 15rem;">
+          <input type="time" name="" id="task-time-input" style="height:3rem;">
+        </div>
+        <textarea
+          class="form-control"
+          placeholder="Task info"
+          data-orig-placeholder='Task info'
+          id="task-info"
+          style="height: 100px"
+        ></textarea>
+        <button
+          type="submit"
+          class="btn btn-primary btn-lg default-color"
+          id="submit-task-btn"
+        >
+          Add task
+        </button>
+      </form>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    
+    <div class="modal" id="myModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="titleModal">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p id="textModal">Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+    
+  </body>
+</html>

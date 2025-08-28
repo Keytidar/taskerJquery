@@ -1,5 +1,5 @@
 'use strict';
-import { taskerFunctions, uiFunctions, utilFunctions } from "./functions.js";
+import { taskerFunctions, uiFunctions, utilFunctions } from "./functions.mjs";
 // const tasksSaved = [];
 const tasksSaved = JSON.parse(localStorage.getItem('taskStorage') || '[]');
 uiFunctions.preloaderHide();
