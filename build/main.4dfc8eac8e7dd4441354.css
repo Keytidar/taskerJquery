@@ -1,0 +1,131 @@
+/*!*********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./frontend/src/styles/style.css ***!
+  \*********************************************************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: rgb(163, 172, 192);
+  font-family: "Exo 2", sans-serif;
+}
+
+button:active {
+  scale: 95%;
+}
+
+.bg {
+  background-color: rgb(8, 9, 12);
+  background-image: url(9f189f838274fa97dd63.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-height: 100vh;
+  max-width: 100vw;
+}
+
+#preloader {
+  position: absolute;
+  background-color: transparent;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  min-height: 100vh;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.invisible-container {
+  padding-top: 4rem;
+}
+
+#tasks-display {
+  width: 100%;
+  min-height: 20rem;
+  box-shadow: -1px 0px 160px -8px rgba(185, 192, 205, 0.75);
+  -webkit-box-shadow: -1px 0px 160px -8px rgba(185, 192, 205, 0.75);
+  -moz-box-shadow: -1px 0px 160px -8px rgba(185, 192, 205, 0.75);
+  background-color: rgba(8, 9, 12, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgb(107, 114, 140);
+}
+
+.task-parent {
+  gap: 1rem;
+}
+
+h2 {
+  text-align: center;
+}
+
+.bg-logo {
+  background-image: url(8c5b220bf6f482881a90.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input[type=date],
+input[type=time] {
+  text-align: center;
+  font-size: 2rem;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator,
+input[type=time]::-webkit-calendar-picker-indicator,
+input[type=datetime-local]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+input, textarea {
+  background-color: rgb(8, 9, 12) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+          backdrop-filter: blur(12px) !important;
+  border: 1px solid rgb(122, 133, 156) !important;
+  opacity: 0.8;
+  color: rgb(163, 172, 192) !important;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: rgb(163, 172, 192) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgb(163, 172, 192) !important;
+}
+
+.default-color {
+  background-color: rgb(8, 9, 12) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+          backdrop-filter: blur(12px) !important;
+  color: rgb(163, 172, 192) !important;
+  border: 1px solid rgb(122, 133, 156) !important;
+}
+
+.bg-danger::-moz-placeholder {
+  color: white !important;
+}
+
+.bg-danger::placeholder {
+  color: white !important;
+}
+
+#errors-container {
+  min-height: 2.8rem;
+}
+
+#errors-container > * {
+  outline: 2px solid red;
+  color: red;
+  padding: 0.4rem;
+  font-size: 1.5rem;
+  background-color: black;
+  font-weight: 600;
+}
+
+.no-border {
+  border: none !important;
+}
