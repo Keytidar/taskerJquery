@@ -1,0 +1,6 @@
+template.js
+*.map
+node_modules
+*.env
+mongoDB
+build
