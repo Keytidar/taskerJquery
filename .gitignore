@@ -3,3 +3,4 @@ template.js
 node_modules
 *.env
 mongoDB
+build

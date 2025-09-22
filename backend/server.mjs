@@ -30,7 +30,7 @@ app.use(cors()); // We allow cross-domain requests
 app.use(express.json()); //JSON auto parse
 
 // ======================ENDPOINTS========================
-//CRUD
+
 
 app.post('/tasks', async (req, res) => {
   try {
