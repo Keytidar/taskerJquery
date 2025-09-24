@@ -12,7 +12,7 @@ button:active {
 
 .bg {
   background-color: rgb(8, 9, 12);
-  background-image: url(/frontend/assets/images/galaxy-night-background.png);
+  background-image: url(/public/galaxy-night-view.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -58,7 +58,6 @@ h2 {
 }
 
 .bg-logo {
-  background-image: url(/frontend/assets/images/logo.svg);
   background-repeat: no-repeat;
   background-position: center;
 }

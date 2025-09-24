@@ -54,7 +54,7 @@ export const taskerFunctions = {
             <h1>${task.header}</h1>
             <h5 class="mb-0 text-truncate">${task.data}</h5>
             <div class="ms-auto align-text-center d-flex align-items-center gap-3">
-              <span>${task.date}  ${task.time}</span>
+              <span style="min-width: 5rem">${task.date}  ${task.time}</span>
                 <input type="checkbox" class="btn-check" id="${
                   'checkbox-' + task._id
                 }" autocomplete="off" ${isChecked}>
